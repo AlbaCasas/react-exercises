@@ -1,9 +1,12 @@
+import { useState } from "react";
+
 const Exercise3 = () => {
+  const [count, setCount] = useState(0);
   return (
     <div>
-      <button>+1</button>
-      <button>-1</button>
-      <p>Likes: 0</p>
+      <button onClick={() => setCount(count + 1)}>+1</button>
+      <button onClick={() => setCount(count - 1)}>-1</button>
+      <p>Likes: {count}</p>
     </div>
   );
 };
