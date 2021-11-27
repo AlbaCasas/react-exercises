@@ -13,7 +13,7 @@ const Exercise1 = () => {
           }}
         />
       </form>
-      {content}
+      <p>{content}</p>
     </div>
   );
 };
