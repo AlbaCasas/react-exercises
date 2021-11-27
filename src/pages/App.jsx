@@ -1,5 +1,14 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Exercise1 from "./Exercise1";
+
 const App = () => {
-  return <h1>Hello World!</h1>;
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="exercise-1" element={<Exercise1 />} />
+      </Routes>
+    </BrowserRouter>
+  );
 };
 
 export default App;
