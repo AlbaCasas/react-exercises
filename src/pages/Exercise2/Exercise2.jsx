@@ -1,8 +1,11 @@
+import { useState } from "react";
+
 const Exercise2 = () => {
+  const [count, setCount] = useState(0);
   return (
     <div>
-      <button>Click me</button>
-      <p>I have been clicked 0 times</p>
+      <button onClick={() => setCount(count + 1)}>Click me</button>
+      <p>I have been clicked {count} times</p>
     </div>
   );
 };
