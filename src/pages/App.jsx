@@ -5,6 +5,7 @@ import Exercise3 from "./Exercise3";
 import Exercise4 from "./Exercise4";
 import Exercise5 from "./Exercise5";
 import Exercise6 from "./Exercise6";
+import Exercise7 from "./Exercise7";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="exercise-4" element={<Exercise4 />} />
         <Route path="dummy-blog" element={<Exercise5 />} />
         <Route path="smart-blog" element={<Exercise6 />} />
+        <Route path="like-post" element={<Exercise7 />} />
       </Routes>
     </BrowserRouter>
   );
