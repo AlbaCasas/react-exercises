@@ -1,24 +1,37 @@
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
+
+const list = [
+  "dog",
+  "cat",
+  "horse",
+  "parrot",
+  "vulture",
+  "lion",
+  "snake",
+  "pinguin",
+  "ant",
+  "canary",
+  "elephant",
+  "fish",
+  "fly",
+  "eagle",
+];
 
 const Exercise7 = () => {
-  const [posts, setPosts] = useState([]);
+  const [input, setInput] = useState();
 
-  const handlePostSubmit = (event) => {
-    event.preventDefault();
-    const inputValue = event.target[0].value;
-    if (inputValue !== "") {
-      setPosts([...posts, inputValue]);
-    }
-  };
   return (
     <div>
-      <form onSubmit={handlePostSubmit}>
-        <input placeholder="Write the content"></input>
-        <button>New post</button>
-        {posts.map((posts) => {
-          return <p>{posts}</p>;
-        })}
-      </form>
+      <input
+        onChange={(event) => {
+          setInput(event.target.value);
+        }}
+      ></input>
+      {list
+        .filter((animal) => animal.includes(input))
+        .map((filteredAnimal) => (
+          <p>{filteredAnimal}</p>
+        ))}
     </div>
   );
 };

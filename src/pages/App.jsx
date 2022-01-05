@@ -17,7 +17,7 @@ const App = () => {
         <Route path="exercise-4" element={<Exercise4 />} />
         <Route path="dummy-blog" element={<Exercise5 />} />
         <Route path="smart-blog" element={<Exercise6 />} />
-        <Route path="like-post" element={<Exercise7 />} />
+        <Route path="filter-list" element={<Exercise7 />} />
       </Routes>
     </BrowserRouter>
   );
